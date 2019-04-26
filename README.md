@@ -33,7 +33,7 @@ _This program gathers user input - a word and a sentence - and then it counts ho
 
 ## Known Bugs
 
-_There are no known bugs._
+_There is potentially a bug with any of the methods using for-loops going through arrays or lists and replacing characters._
 
 ## Support and contact details
 

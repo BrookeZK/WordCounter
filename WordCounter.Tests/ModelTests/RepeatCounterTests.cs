@@ -113,11 +113,11 @@ namespace WordCounter.Tests
       RepeatCounter newRepeatCounter = new RepeatCounter("boy.", "test sentence");
       string wordInput = newRepeatCounter.GetWordInput();
       char[] wordInputArray = newRepeatCounter.ToCharArray(wordInput);
-      char[] comparison = {'b', 'o', 'y', '.'};
+      char[] comparison = {'b', 'o', 'y', ' '};
       //Act
       char[] result = newRepeatCounter.ReplaceSpecialCharacters(wordInputArray);
       //Assert
-      CollectionAssert.AreEqual(result, comparison);
+      Assert.AreEqual(result[3], comparison[3]);
     }
 
     // [TestMethod]

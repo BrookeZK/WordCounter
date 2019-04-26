@@ -63,8 +63,18 @@ namespace WordCounter
 
     public char[] ReplaceSpecialCharacters(char[] userInputArray)
     {
-      char[] result = {'b', 'o', 'y', ' '};
-      return result;
+      List<char> alphabet = GetAlphabet();
+      for (int i = 0; i < userInputArray.Length; i++)
+      {
+        for (int j = 0; j < alphabet.Count; j++)
+        {
+          if (userInputArray[i] != alphabet[i])
+          {
+            userInputArray[i] = ' ';
+          }
+        }
+      }
+      return userInputArray;
     }
 
     // public char[] IsAlphabetChar(char[] userInput)
