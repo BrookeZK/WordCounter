@@ -42,18 +42,15 @@ namespace WordCounter
       {
         for (int j = 0; j < alphabet.Length; j++)
         {
-          if (userInput[i] == alphabet[i])
+
+          if (userInput[i] != alphabet[i])
           {
-            return true;
+            return false;
           }
-          else
-          {
-          return false;
-          }
+
         }
-        return false;
       }
-      return false;
+      return true;
     }
 
   }
