@@ -13,7 +13,6 @@ _This program gathers user input - a word and a sentence - and then it counts ho
 | ------------- |:-------------:| -----:|
 | Program checks if user input is not a word and rejects it | "243" | "This is not a word, please type in a word." |
 | Program takes in a word and returns the word to the user in | "word" | "word" |
-| Program checks if user input is not a sentence | "234 2223" | "This is not a sentence. Please type in a sentence." |
 | Program takes in a sentence and returns the sentence to the user | "this is a word" | "this is a word" |
 | Program takes the word input and checks that it appears in the sentence input one time | "word" & "this is a word" | 1 |
 | Program takes the word input and checks that it appears in the sentence more than once | "the" & "the dog and the cat" | 2 |
@@ -33,7 +32,7 @@ _This program gathers user input - a word and a sentence - and then it counts ho
 
 ## Known Bugs
 
-_There is potentially a bug with any of the methods using for-loops going through arrays or lists and replacing characters._
+_Currently the IsInputValid method does not work._
 
 ## Support and contact details
 
