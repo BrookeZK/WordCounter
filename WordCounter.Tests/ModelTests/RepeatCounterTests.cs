@@ -7,7 +7,7 @@ namespace WordCounter.Tests
   public class RepeatCounterTest
   {
     [TestMethod]
-    public void IsWord_ChecksIfInputIsAnAlphabetCharacter_bool()
+    public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
     {
       //Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter();
@@ -15,7 +15,7 @@ namespace WordCounter.Tests
       //Act
       bool result = newRepeatCounter.IsWord(testString);
       //Assert
-      Assert.AreEqual(false, result);
+      Assert.AreEqual(true, result);
     }
   }
 }

@@ -2,7 +2,7 @@ namespace WordCounter
 {
   public class RepeatCounter
   {
-    public bool IsWord(string userInput)
+    public bool IsAlphabetChar(string userInput)
     {
       if (userInput == userInput)
       {
@@ -10,7 +10,7 @@ namespace WordCounter
       }
       else
       {
-      return false;  
+      return false;
       }
     }
   }
