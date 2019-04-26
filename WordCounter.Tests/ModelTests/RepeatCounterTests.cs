@@ -63,6 +63,19 @@ namespace WordCounter.Tests
       Assert.AreEqual(result[2], '2');
     }
 
+    [TestMethod]
+    public void CheckIfMatching_ChecksIfWordMatchesAWordInSentence_string()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test");
+      string wordInput = newRepeatCounter.GetWordInput();
+      string sentenceInput = newRepeatCounter.GetSentenceInput();
+      //Act
+      bool result = newRepeatCounter.CheckIfMatching(wordInput, sentenceInput);
+      //Assert
+      Assert.AreEqual(result, false);
+    }
+
     // [TestMethod]
     // public void IsAlphabetChar_ChecksIfWordInputIsAnAlphabetCharacter_charArray()
     // {

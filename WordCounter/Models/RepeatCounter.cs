@@ -35,6 +35,18 @@ namespace WordCounter
       return userInputCharArray;
     }
 
+    public bool CheckIfMatching(string word, string sentence)
+    {
+      if (word == sentence)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+
     // public char[] IsAlphabetChar(char[] userInput)
     // {
     //   // char[] userInput = {'1'};
