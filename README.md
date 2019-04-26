@@ -16,10 +16,22 @@ _This program gathers user input - a word and a sentence - and then it counts ho
 | Program takes the word input and checks that it appears in the sentence input one time | "word" & "this is a word" | 1 |
 | Program takes the word input and checks that it appears in the sentence more than once | "the" & "the dog and the cat" | 2 |
 
+## Setup/Installation Requirements - Option 1
+
+* _Open the website by typing in the following link into your web browser: <https://BrookeZK.github.io/WordCounter>_.
+
+## Setup/Installation Requirements - Option 2
+
+* _Open via GitHub repository by going to <https://github.com/BrookeZK/WordCounter>._
+* _In your command line (Terminal or another program), navigate to your desktop._
+* _In your command line, type "git clone https://github.com/BrookeZK/WordCounter" to clone the repository to your desktop._
+* _In your command line, navigate into the new folder "WordCounter.Solution", then into the subfolder "WordCounter"._
+* _Once inside "WordCounter," type "mcs Program.cs Models/RepeatCounter.cs; mono Program.exe" and your terminal will compile and initiate "Word Counter" right there in your terminal._
+
 
 ## Known Bugs
 
-_There are no known bugs, but this webpage is best viewed on a full screen._
+_There are no known bugs._
 
 ## Support and contact details
 
