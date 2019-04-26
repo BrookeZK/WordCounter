@@ -7,15 +7,33 @@ namespace WordCounter.Tests
   public class RepeatCounterTest
   {
     [TestMethod]
-    public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
+    public void RepeatCounterConstructor_MakeANewInstanceOfRepeatCounterClass_RepeatCounter()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter();
-      string testString = "1%";
       //Act
-      bool result = newRepeatCounter.IsWord(testString);
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
       //Assert
-      Assert.AreEqual(true, result);
+      Assert.AreEqual(typeof(RepeatCounter), newRepeatCounter.GetType());
     }
+
+    // [TestMethod]
+    // public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
+    // {
+    //   //Arrange
+    //   RepeatCounter newRepeatCounter = new RepeatCounter();
+    //   string testString = "1%";
+    //   //Act
+    //   bool result = newRepeatCounter.IsWord(testString);
+    //   //Assert
+    //   Assert.AreEqual(true, result);
+    // }
+
+    //Arrange
+    //Act
+    //Assert
+
+    //Arrange
+    //Act
+    //Assert
   }
 }

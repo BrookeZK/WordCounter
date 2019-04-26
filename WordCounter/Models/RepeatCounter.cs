@@ -1,17 +1,29 @@
+using System.Collections.Generic;
+
 namespace WordCounter
 {
   public class RepeatCounter
   {
-    public bool IsAlphabetChar(string userInput)
+    private string _wordInput;
+    private string _sentenceInput;
+    private List<char> _alphabet = new List<char> {};
+
+    public RepeatCounter(string wordInput, string sentenceInput)
     {
-      if (userInput == userInput)
-      {
-        return true;
-      }
-      else
-      {
-      return false;
-      }
+      _wordInput = wordInput;
+      _sentenceInput = sentenceInput;
     }
+    //
+    // public bool IsAlphabetChar(string userInput)
+    // {
+    //   if (userInput == userInput)
+    //   {
+    //     return true;
+    //   }
+    //   else
+    //   {
+    //   return false;
+    //   }
+    // }
   }
 }
