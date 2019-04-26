@@ -32,7 +32,7 @@ namespace WordCounter
 
     public string MakeLowerCase(string userInput)
     {
-      string lowerUserInput = "ses";
+      string lowerUserInput = userInput.ToLower();
       return lowerUserInput;
     }
 
