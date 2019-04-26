@@ -49,12 +49,24 @@ namespace WordCounter.Tests
       Assert.AreEqual('a', alphaArray[0]);
     }
 
+    [TestMethod]
+    public void ToCharArray_TurnsUserInputIntoAnArrayOfChars_CharArray()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("1", "test sentence");
+      string wordInput = newRepeatCounter.GetWordInput();
+      //Act
+      char[] result = newRepeatCounter.ToCharArray(wordInput);
+      //Assert
+      Assert.AreEqual('0', result[0]);
+    }
+
     // [TestMethod]
     // public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
     // {
     //   //Arrange
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("1%", "test sentece");
-    //   string testString = "1%";
+    //   RepeatCounter newRepeatCounter = new RepeatCounter("1", "test sentece");
+    //   string testString = newRepeatCounter.GetWordInput();
     //   //Act
     //   bool result = newRepeatCounter.IsAlphabetChar(testString);
     //   //Assert
