@@ -30,6 +30,12 @@ namespace WordCounter
       return _alphabet;
     }
 
+    public string MakeLowerCase(string userInput)
+    {
+      string lowerUserInput = "ses";
+      return lowerUserInput;
+    }
+
     public char[] ToCharArray(string userInput)
     {
       char[] userInputCharArray = userInput.ToCharArray();

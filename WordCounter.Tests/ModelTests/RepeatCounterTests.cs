@@ -52,6 +52,21 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
+    public void MakeLowerCase_TurnUserInputToAllLowerCase_string()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("teSt", "tEst senteNce");
+      string wordInput = newRepeatCounter.GetWordInput();
+      string sentenceInput = newRepeatCounter.GetSentenceInput();
+      //Act
+      string lowerWordInput = newRepeatCounter.MakeLowerCase(wordInput);
+      string lowerSentenceInput = newRepeatCounter.MakeLowerCase(sentenceInput);
+      //Assert
+      Assert.AreEqual("test", lowerWordInput);
+      Assert.AreEqual("test sentence", lowerSentenceInput);
+    }
+
+    [TestMethod]
     public void ToCharArray_TurnsUserInputIntoAnArrayOfChars_CharArray()
     {
       //Arrange
