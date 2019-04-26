@@ -61,17 +61,18 @@ namespace WordCounter.Tests
       Assert.AreEqual(result[0], '1');
     }
 
-    // [TestMethod]
-    // public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
-    // {
-    //   //Arrange
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("1", "test sentece");
-    //   string testString = newRepeatCounter.GetWordInput();
-    //   //Act
-    //   bool result = newRepeatCounter.IsAlphabetChar(testString);
-    //   //Assert
-    //   Assert.AreEqual(true, result);
-    // }
+    [TestMethod]
+    public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("1", "test sentence");
+      string testString = newRepeatCounter.GetWordInput();
+      char[] testArray = ToCharArray(testString);
+      //Act
+      bool result = newRepeatCounter.IsAlphabetChar(testArraycs);
+      //Assert
+      Assert.AreEqual(true, result);
+    }
 
     //Arrange
     //Act

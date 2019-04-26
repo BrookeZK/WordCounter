@@ -35,24 +35,24 @@ namespace WordCounter
       return userInputCharArray;
     }
 
-    // public bool IsAlphabetChar(string userInput)
-    // {
-    //   char[] userInputCharArray = userInput.ToCharArray();
-    //   char[] alphabet = GetAlphabet();
-    //   for (int i = 0; i < userInputCharArray; i++)
-    //   {
-    //     for (int j = 0; j < alphabet; j++)
-    //     {
-    //       if (userInputCharArray[i] == alphabet[i])
-    //       {
-    //         return true;
-    //       }
-    //       else
-    //       {
-    //       return false;
-    //       }
-    //     }
-    //   }
-    // }
+    public bool IsAlphabetChar(char[] userInput)
+    {
+      char[] alphabet = GetAlphabet();
+      for (int i = 0; i < userInput; i++)
+      {
+        for (int j = 0; j < alphabet; j++)
+        {
+          if (userInputCharArray[i] == alphabet[i])
+          {
+            return true;
+          }
+          else
+          {
+          return false;
+          }
+        }
+      }
+    }
+
   }
 }
