@@ -88,7 +88,7 @@ namespace WordCounter.Tests
       string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
       Console.WriteLine(sentenceArray[1]);
       //Assert
-      Assert.AreEqual(sentenceArray[0], compareArray[1]);
+      Assert.AreEqual(sentenceArray[0], compareArray[0]);
     }
 
     // [TestMethod]
