@@ -79,24 +79,10 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void CheckIfMatching_ChecksIfWordMatchesAWordInSentence_true()
-    {
-      //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test");
-      string wordInput = newRepeatCounter.GetWordInput();
-      string sentenceInput = newRepeatCounter.GetSentenceInput();
-      //Act
-      bool result = newRepeatCounter.CheckIfMatching(wordInput, sentenceInput);
-      //Assert
-      Assert.AreEqual(result, true);
-    }
-
-
-    [TestMethod]
     public void CheckIfWordMatchSentence_ChecksIfWordMatchesAWordInSentence_true()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("of", "sentence of test");
+      RepeatCounter newRepeatCounter = new RepeatCounter("of", "of");
       string wordInput = newRepeatCounter.GetWordInput();
       string sentenceInput = newRepeatCounter.GetSentenceInput();
       string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);

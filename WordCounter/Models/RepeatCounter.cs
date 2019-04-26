@@ -42,18 +42,6 @@ namespace WordCounter
       return sentenceInputArray;
     }
 
-    public bool CheckIfMatching(string word, string sentence)
-    {
-      if (word == sentence)
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
-    }
-
     public bool CheckIfWordMatchSentence(string word, string[] sentence)
     {
       for (int i = 0; i < sentence.Length; i++)
