@@ -33,8 +33,7 @@ namespace WordCounter
 
     public List<char> GetNumbers()
     {
-      List<char> empty = new List<char> {};
-      return empty;
+      return _numbers;
     }
 
     public string MakeLowerCase(string userInput)

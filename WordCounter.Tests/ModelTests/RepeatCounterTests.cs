@@ -56,11 +56,11 @@ namespace WordCounter.Tests
     {
       //Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
-      List<char> comparisonList = new List<char> {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+      List<char> comparisonList = new List<char> {'0', '2', '3', '4', '5', '6', '7', '8', '9', '1'};
       //Act
       List<char> numList = newRepeatCounter.GetNumbers();
       //Assert
-      CollectionAssert.AreEqual(numList, comparisonList);
+      CollectionAssert.AreEquivalent(numList, comparisonList);
     }
 
     [TestMethod]
