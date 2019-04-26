@@ -2,7 +2,16 @@ namespace WordCounter
 {
   public class RepeatCounter
   {
-    // properties, constructors, methods, etc. go here
+    public bool IsWord(string userInput)
+    {
+      if (userInput == userInput)
+      {
+        return true;
+      }
+      else
+      {
+      return false;  
+      }
     }
   }
 }
