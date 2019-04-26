@@ -58,7 +58,7 @@ namespace WordCounter.Tests
       //Act
       char[] result = newRepeatCounter.ToCharArray(wordInput);
       //Assert
-      Assert.AreEqual('0', result[0]);
+      Assert.AreEqual(result[0], '1');
     }
 
     // [TestMethod]
