@@ -76,6 +76,21 @@ namespace WordCounter.Tests
       Assert.AreEqual(result, true);
     }
 
+    [TestMethod]
+    public void MakeSentenceArray_MakeASentenceStringIntoAnArrayOfStrings_StringArray()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "this is a test sentence");
+      string sentenceInput = newRepeatCounter.GetSentenceInput();
+      string[] compareArray = { "this", "is", "a", "test", "sentence" };
+      Console.WriteLine(compareArray[1]);
+      //Act
+      string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
+      Console.WriteLine(sentenceArray[1]);
+      //Assert
+      Assert.AreEqual(sentenceArray[0], compareArray[1]);
+    }
+
     // [TestMethod]
     // public void IsAlphabetChar_ChecksIfWordInputIsAnAlphabetCharacter_charArray()
     // {

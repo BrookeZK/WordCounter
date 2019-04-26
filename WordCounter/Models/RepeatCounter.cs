@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace WordCounter
 {
@@ -45,6 +46,12 @@ namespace WordCounter
       {
         return false;
       }
+    }
+
+    public string[] MakeSentenceArray(string sentenceInput)
+    {
+      string[] sentenceInputArray = sentenceInput.Split(' ');
+      return sentenceInputArray;
     }
 
     // public char[] IsAlphabetChar(char[] userInput)
