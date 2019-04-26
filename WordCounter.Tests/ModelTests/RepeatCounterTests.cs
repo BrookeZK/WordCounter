@@ -46,7 +46,7 @@ namespace WordCounter.Tests
       //Act
       char[] alphaArray = newRepeatCounter.GetAlphabet();
       //Assert
-      Assert.AreEqual('b', alphaArray[0]);
+      Assert.AreEqual('a', alphaArray[0]);
     }
 
     // [TestMethod]
