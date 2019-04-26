@@ -67,9 +67,9 @@ namespace WordCounter.Tests
       //Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter("1", "test sentence");
       string testString = newRepeatCounter.GetWordInput();
-      char[] testArray = ToCharArray(testString);
+      char[] testArray = newRepeatCounter.ToCharArray(testString);
       //Act
-      bool result = newRepeatCounter.IsAlphabetChar(testArraycs);
+      bool result = newRepeatCounter.IsAlphabetChar(testArray);
       //Assert
       Assert.AreEqual(true, result);
     }

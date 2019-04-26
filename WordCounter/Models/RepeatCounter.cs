@@ -38,11 +38,11 @@ namespace WordCounter
     public bool IsAlphabetChar(char[] userInput)
     {
       char[] alphabet = GetAlphabet();
-      for (int i = 0; i < userInput; i++)
+      for (int i = 0; i < userInput.Length; i++)
       {
-        for (int j = 0; j < alphabet; j++)
+        for (int j = 0; j < alphabet.Length; j++)
         {
-          if (userInputCharArray[i] == alphabet[i])
+          if (userInput[i] == alphabet[i])
           {
             return true;
           }
@@ -51,7 +51,9 @@ namespace WordCounter
           return false;
           }
         }
+        return false;
       }
+      return false;
     }
 
   }
