@@ -73,7 +73,7 @@ namespace WordCounter.Tests
       //Act
       bool result = newRepeatCounter.CheckIfMatching(wordInput, sentenceInput);
       //Assert
-      Assert.AreEqual(result, false);
+      Assert.AreEqual(result, true);
     }
 
     // [TestMethod]
