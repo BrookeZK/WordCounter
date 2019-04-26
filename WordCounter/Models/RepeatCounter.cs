@@ -42,6 +42,42 @@ namespace WordCounter
             return lowerUserInput;
         }
 
+        public char[] ReplaceSpecialCharacters(char[] userInputArray)
+        {
+            List<char> alphabet = GetAlphabet();
+            for (int i = 0; i < userInputArray.Length; i++)
+            {
+                for (int j = 0; j < alphabet.Count; j++)
+                {
+                    if (userInputArray[i] != alphabet[j])
+                    {
+                        userInputArray[i] = ' ';
+                    }
+                }
+            }
+            return userInputArray;
+        }
+
+        // public bool IsInputValid(char[] userInputArray)
+        // {
+        //     List<char> numbers = GetNumbers();
+        //     for (int i = 0; i < userInputArray.Length; i++)
+        //     {
+        //         for (int j = 0; j < numbers.Count; j++)
+        //         {
+        //             if (userInputArray[i] == numbers[j])
+        //             {
+        //                 return false;
+        //             }
+        //             else
+        //             {
+        //                 i++;
+        //             }
+        //         }
+        //     }
+        //     return true;
+        // }
+
         public char[] ToCharArray(string userInput)
         {
             char[] userInputCharArray = userInput.ToCharArray();
@@ -67,41 +103,6 @@ namespace WordCounter
             return instancesOfMatch;
         }
 
-        public char[] ReplaceSpecialCharacters(char[] userInputArray)
-        {
-            List<char> alphabet = GetAlphabet();
-            for (int i = 0; i < userInputArray.Length; i++)
-            {
-                for (int j = 0; j < alphabet.Count; j++)
-                {
-                    if (userInputArray[i] != alphabet[j])
-                    {
-                        userInputArray[i] = ' ';
-                    }
-                }
-            }
-            return userInputArray;
-        }
-
-        public bool IsInputValid(char[] userInputArray)
-        {
-            List<char> numbers = GetNumbers();
-            for (int i = 0; i < userInputArray.Length; i++)
-            {
-                for (int j = 0; j < numbers.Count; j++)
-                {
-                    if (userInputArray[i] == numbers[j])
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        i++;
-                    }
-                }
-            }
-            return true;
-        }
     }
 
 }

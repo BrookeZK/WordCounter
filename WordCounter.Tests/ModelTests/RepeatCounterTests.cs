@@ -78,6 +78,33 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
+        public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_CharArray()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("boy.dog.", "test sentence");
+            string wordInput = newRepeatCounter.GetWordInput();
+            char[] wordInputArray = newRepeatCounter.ToCharArray(wordInput);
+            char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', 'g', ' '};
+            //Act
+            char[] result = newRepeatCounter.ReplaceSpecialCharacters(wordInputArray);
+            //Assert
+            Assert.AreEqual(result[3], comparison[7]);
+        }
+
+        // [TestMethod]
+        // public void IsInputValid_ChecksIfWordInputIsAnAlphabetCharacter_bool()
+        // {
+        //     //Arrange
+        //     RepeatCounter newRepeatCounter = new RepeatCounter("xab", "test sentence");
+        //     string testString = newRepeatCounter.GetWordInput();
+        //     char[] testArray = newRepeatCounter.ToCharArray(testString);
+        //     char[] testArray2 = {'x', 'a', 'b'};
+        //     //Act
+        //     bool result = newRepeatCounter.IsInputValid(testArray);
+        //     //Assert
+        //     Assert.AreEqual(true, result);
+        // }
+
+        [TestMethod]
         public void ToCharArray_TurnsUserInputIntoAnArrayOfChars_CharArray()
         {
             //Arrange
@@ -114,33 +141,6 @@ namespace WordCounter.Tests
             int result = newRepeatCounter.CheckIfWordMatchSentence(wordInput, sentenceArray);
             //Assert
             Assert.AreEqual(2, result);
-        }
-
-        [TestMethod]
-        public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_CharArray()
-        {
-            RepeatCounter newRepeatCounter = new RepeatCounter("boy.dog.", "test sentence");
-            string wordInput = newRepeatCounter.GetWordInput();
-            char[] wordInputArray = newRepeatCounter.ToCharArray(wordInput);
-            char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', 'g', ' '};
-            //Act
-            char[] result = newRepeatCounter.ReplaceSpecialCharacters(wordInputArray);
-            //Assert
-            Assert.AreEqual(result[3], comparison[7]);
-        }
-
-        [TestMethod]
-        public void IsInputValid_ChecksIfWordInputIsAnAlphabetCharacter_bool()
-        {
-            //Arrange
-            RepeatCounter newRepeatCounter = new RepeatCounter("xab", "test sentence");
-            string testString = newRepeatCounter.GetWordInput();
-            char[] testArray = newRepeatCounter.ToCharArray(testString);
-            char[] testArray2 = {'x', 'a', 'b'};
-            //Act
-            bool result = newRepeatCounter.IsInputValid(testArray);
-            //Assert
-            Assert.AreEqual(true, result);
         }
 
     }
