@@ -79,17 +79,17 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void CheckIfWordMatchSentence_ChecksIfWordMatchesAWordInSentence_true()
+    public void CheckIfWordMatchSentence_ChecksIfWordMatchesAWordInSentence_int()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("of", "of");
+      RepeatCounter newRepeatCounter = new RepeatCounter("of", "of of of of");
       string wordInput = newRepeatCounter.GetWordInput();
       string sentenceInput = newRepeatCounter.GetSentenceInput();
       string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
       //Act
-      bool result = newRepeatCounter.CheckIfWordMatchSentence(wordInput, sentenceArray);
+      int result = newRepeatCounter.CheckIfWordMatchSentence(wordInput, sentenceArray);
       //Assert
-      Assert.AreEqual(result, true);
+      Assert.AreEqual(result, 3);
     }
 
     // [TestMethod]

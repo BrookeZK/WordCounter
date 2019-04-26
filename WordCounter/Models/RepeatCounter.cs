@@ -42,16 +42,17 @@ namespace WordCounter
       return sentenceInputArray;
     }
 
-    public bool CheckIfWordMatchSentence(string word, string[] sentence)
+    public int CheckIfWordMatchSentence(string word, string[] sentence)
     {
+      int instancesOfMatch = 0;
       for (int i = 0; i < sentence.Length; i++)
       {
         if (word == sentence[i])
         {
-          return true;
+          instancesOfMatch++;
         }
       }
-        return false;
+        return instancesOfMatch;
     }
 
     // public char[] IsAlphabetChar(char[] userInput)
