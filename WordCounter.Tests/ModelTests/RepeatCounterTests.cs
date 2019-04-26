@@ -107,6 +107,19 @@ namespace WordCounter.Tests
       Assert.AreEqual(result, 4);
     }
 
+    [TestMethod]
+    public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_CharArray()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("boy.", "test sentence");
+      string wordInput = newRepeatCounter.GetWordInput();
+      char[] wordInputArray = newRepeatCounter.ToCharArray(wordInput);
+      char[] comparison = {'b', 'o', 'y', '.'};
+      //Act
+      char[] result = newRepeatCounter.ReplaceSpecialCharacters(wordInputArray);
+      //Assert
+      CollectionAssert.AreEqual(result, comparison);
+    }
+
     // [TestMethod]
     // public void IsAlphabetChar_ChecksIfWordInputIsAnAlphabetCharacter_charArray()
     // {

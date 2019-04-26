@@ -61,6 +61,12 @@ namespace WordCounter
         return instancesOfMatch;
     }
 
+    public char[] ReplaceSpecialCharacters(char[] userInputArray)
+    {
+      char[] result = {'b', 'o', 'y', ' '};
+      return result;
+    }
+
     // public char[] IsAlphabetChar(char[] userInput)
     // {
     //   // char[] userInput = {'1'};
