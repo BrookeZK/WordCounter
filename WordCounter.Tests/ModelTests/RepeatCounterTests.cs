@@ -64,19 +64,6 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void CheckIfMatching_ChecksIfWordMatchesAWordInSentence_string()
-    {
-      //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test");
-      string wordInput = newRepeatCounter.GetWordInput();
-      string sentenceInput = newRepeatCounter.GetSentenceInput();
-      //Act
-      bool result = newRepeatCounter.CheckIfMatching(wordInput, sentenceInput);
-      //Assert
-      Assert.AreEqual(result, true);
-    }
-
-    [TestMethod]
     public void MakeSentenceArray_MakeASentenceStringIntoAnArrayOfStrings_StringArray()
     {
       //Arrange
@@ -89,6 +76,34 @@ namespace WordCounter.Tests
       Console.WriteLine(sentenceArray[1]);
       //Assert
       Assert.AreEqual(sentenceArray[0], compareArray[0]);
+    }
+
+    [TestMethod]
+    public void CheckIfMatching_ChecksIfWordMatchesAWordInSentence_true()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test");
+      string wordInput = newRepeatCounter.GetWordInput();
+      string sentenceInput = newRepeatCounter.GetSentenceInput();
+      //Act
+      bool result = newRepeatCounter.CheckIfMatching(wordInput, sentenceInput);
+      //Assert
+      Assert.AreEqual(result, true);
+    }
+
+
+    [TestMethod]
+    public void CheckIfWordMatchSentence_ChecksIfWordMatchesAWordInSentence_true()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "sentence test");
+      string wordInput = newRepeatCounter.GetWordInput();
+      string sentenceInput = newRepeatCounter.GetSentenceInput();
+      string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
+      //Act
+      bool result = newRepeatCounter.CheckIfWordMatchSentence(wordInput, sentenceArray);
+      //Assert
+      Assert.AreEqual(result, true);
     }
 
     // [TestMethod]

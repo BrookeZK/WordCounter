@@ -36,6 +36,12 @@ namespace WordCounter
       return userInputCharArray;
     }
 
+    public string[] MakeSentenceArray(string sentenceInput)
+    {
+      string[] sentenceInputArray = sentenceInput.Split(' ');
+      return sentenceInputArray;
+    }
+
     public bool CheckIfMatching(string word, string sentence)
     {
       if (word == sentence)
@@ -48,10 +54,9 @@ namespace WordCounter
       }
     }
 
-    public string[] MakeSentenceArray(string sentenceInput)
+    public bool CheckIfWordMatchSentence(string word, string[] sentence)
     {
-      string[] sentenceInputArray = sentenceInput.Split(' ');
-      return sentenceInputArray;
+      return false;
     }
 
     // public char[] IsAlphabetChar(char[] userInput)
