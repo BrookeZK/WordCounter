@@ -38,6 +38,17 @@ namespace WordCounter.Tests
       Assert.AreEqual("test sentence", sentenceInput);
     }
 
+    [TestMethod]
+    public void GetAlphabet_GetArrayOfAlphabetChar_CharArray()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
+      //Act
+      char[] alphaArray = newRepeatCounter.GetAlphabet();
+      //Assert
+      Assert.AreEqual('b', alphaArray[0]);
+    }
+
     // [TestMethod]
     // public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
     // {

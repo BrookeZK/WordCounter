@@ -6,7 +6,7 @@ namespace WordCounter
   {
     private string _wordInput;
     private string _sentenceInput;
-    private List<char> _alphabet = new List<char> {};
+    private char[] _alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z'};
 
     public RepeatCounter(string wordInput, string sentenceInput)
     {
@@ -22,6 +22,11 @@ namespace WordCounter
     public string GetSentenceInput()
     {
       return _sentenceInput;
+    }
+
+    public char[] GetAlphabet()
+    {
+      return _alphabet;
     }
 
     // public bool IsAlphabetChar(string userInput)
