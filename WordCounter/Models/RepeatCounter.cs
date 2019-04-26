@@ -6,7 +6,7 @@ namespace WordCounter
   {
     private string _wordInput;
     private string _sentenceInput;
-    private static char[] _alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z'};
+    private static List<char> _alphabet = new List<char> {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z', ' '};
 
     public RepeatCounter(string wordInput, string sentenceInput)
     {
@@ -24,7 +24,7 @@ namespace WordCounter
       return _sentenceInput;
     }
 
-    public char[] GetAlphabet()
+    public List<char> GetAlphabet()
     {
       return _alphabet;
     }
@@ -35,20 +35,56 @@ namespace WordCounter
       return userInputCharArray;
     }
 
-    public bool IsInputValid(char[] userInput)
-    {
-      for (int i = 0; i < userInput.Length; i++)
-      {
-        for (int j = 0; j < _alphabet.Length; j++)
-        {
-          if (userInput[i] != _alphabet[i])
-          {
-            return false;
-          }
-        }
-      }
-      return true;
-    }
+    // public char[] IsAlphabetChar(char[] userInput)
+    // {
+    //   // char[] userInput = {'1'};
+    //   List<char> alphabet = GetAlphabet();
+    //   for (int i = 0; i < userInput.Length; i++)
+    //   {
+    //     for (int j = 0; j < alphabet.Count; j++)
+    //     {
+    //       if (userInput[i] == alphabet[j])
+    //       {
+    //         char newChar = alphabet[j];
+    //         userInput[i] = newChar;
+    //       }
+    //       else if (userInput[i] != alphabet[j])
+    //       {
+    //         userInput[i] = '0';
+    //       }
+    //       // if (userInput[i] != _alphabet[j])
+    //       // {
+    //       //   userInput[i] = '0';
+    //       // }
+    //       // return userInput;
+    //     }
+    //   }
+    //   return userInput;
+    // }
+
+    // public bool IsInputValid(char[] userInput)
+    // {
+    //   // char [] comparisonUserInput = userInput;
+    //   for (int i = 0; i < userInput.Length; i++)
+    //   {
+    //     for (int j = 0; j < _alphabet.Length; j++)
+    //     {
+    //       if (userInput[i] != _alphabet[j])
+    //       {
+    //         return false;
+    //       }
+    //       else if (userInput[i] == _alphabet[j])
+    //       {
+    //         userInput[i] = _alphabet[j];
+    //         return true;
+    //       }
+    //     }
+    //   }
+    //   if (userInput == userInput)
+    //   {
+    //     return true;
+    //   }
+    // }
 
   }
 }

@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WordCounter;
+using System.Collections.Generic;
+using System;
 
 namespace WordCounter.Tests
 {
@@ -44,35 +46,63 @@ namespace WordCounter.Tests
       //Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
       //Act
-      char[] alphaArray = newRepeatCounter.GetAlphabet();
+      List<char> alphaList = newRepeatCounter.GetAlphabet();
       //Assert
-      Assert.AreEqual('a', alphaArray[0]);
+      Assert.AreEqual('a', alphaList[0]);
     }
 
     [TestMethod]
     public void ToCharArray_TurnsUserInputIntoAnArrayOfChars_CharArray()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("1", "test sentence");
+      RepeatCounter newRepeatCounter = new RepeatCounter("b12", "test sentence");
       string wordInput = newRepeatCounter.GetWordInput();
       //Act
       char[] result = newRepeatCounter.ToCharArray(wordInput);
       //Assert
-      Assert.AreEqual(result[0], '1');
+      Assert.AreEqual(result[2], '2');
     }
 
-    [TestMethod]
-    public void IsInputValid_ChecksIfInputIsAnAlphabetCharacter_bool()
-    {
-      //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("abc", "test sentence");
-      string testString = newRepeatCounter.GetWordInput();
-      char[] testArray = newRepeatCounter.ToCharArray(testString);
-      //Act
-      bool result = newRepeatCounter.IsInputValid(testArray);
-      //Assert
-      Assert.AreEqual(true, result);
-    }
+    // [TestMethod]
+    // public void IsAlphabetChar_ChecksIfWordInputIsAnAlphabetCharacter_charArray()
+    // {
+    //   //Arrange
+    //   RepeatCounter newRepeatCounter = new RepeatCounter("dezzi", "test sentence");
+    //   string testString = newRepeatCounter.GetWordInput();
+    //   char[] testArray = newRepeatCounter.ToCharArray(testString);
+    //   //Act
+    //   char[] result = newRepeatCounter.IsAlphabetChar(testArray);
+    //     // Console.WriteLine("Output from second GetAll test: " result);
+    //
+    //   //Assert
+    //   Assert.AreEqual('i', result[4]);
+    // }
+
+    // [TestMethod]
+    // public void IsInputValid_ChecksIfWordInputIsAnAlphabetCharacter_bool()
+    // {
+    //   //Arrange
+    //   RepeatCounter newRepeatCounter = new RepeatCounter("x", "test sentence");
+    //   string testString = newRepeatCounter.GetWordInput();
+    //   char[] testArray = newRepeatCounter.ToCharArray(testString);
+    //   //Act
+    //   bool result = newRepeatCounter.IsInputValid(testArray);
+    //   //Assert
+    //   Assert.AreEqual(true, result);
+    // }
+
+    // [TestMethod]
+    // public void IsInputValid_ChecksIfSentenceInputIsAlphabetCharacters_bool()
+    // {
+    //   //Arrange
+    //   RepeatCounter newRepeatCounter = new RepeatCounter("abc", "xha");
+    //   string testString = newRepeatCounter.GetSentenceInput();
+    //   char[] testArray = newRepeatCounter.ToCharArray(testString);
+    //   //Act
+    //   bool result = newRepeatCounter.IsInputValid(testArray);
+    //   //Assert
+    //   Assert.AreEqual(true, result);
+    // }
 
     //Arrange
     //Act
