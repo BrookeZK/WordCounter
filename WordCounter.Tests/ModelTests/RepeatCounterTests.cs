@@ -62,14 +62,14 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
+    public void IsInputValid_ChecksIfInputIsAnAlphabetCharacter_bool()
     {
       //Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter("abc", "test sentence");
       string testString = newRepeatCounter.GetWordInput();
       char[] testArray = newRepeatCounter.ToCharArray(testString);
       //Act
-      bool result = newRepeatCounter.IsAlphabetChar(testArray);
+      bool result = newRepeatCounter.IsInputValid(testArray);
       //Assert
       Assert.AreEqual(true, result);
     }
