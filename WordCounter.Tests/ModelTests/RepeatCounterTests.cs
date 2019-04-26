@@ -41,7 +41,7 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void GetAlphabet_GetArrayOfAlphabetChar_CharArray()
+    public void GetAlphabet_GetListOfAlphabetChar_CharList()
     {
       //Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
@@ -49,6 +49,18 @@ namespace WordCounter.Tests
       List<char> alphaList = newRepeatCounter.GetAlphabet();
       //Assert
       Assert.AreEqual('a', alphaList[0]);
+    }
+
+    [TestMethod]
+    public void GetNumbers_GetListOfNumbers_CharList()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
+      List<char> comparisonList = new List<char> {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+      //Act
+      List<char> numList = newRepeatCounter.GetNumbers();
+      //Assert
+      CollectionAssert.AreEqual(numList, comparisonList);
     }
 
     [TestMethod]
@@ -110,15 +122,16 @@ namespace WordCounter.Tests
     [TestMethod]
     public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_CharArray()
     {
-      RepeatCounter newRepeatCounter = new RepeatCounter("boy.", "test sentence");
+      RepeatCounter newRepeatCounter = new RepeatCounter("boy.dog.", "test sentence");
       string wordInput = newRepeatCounter.GetWordInput();
       char[] wordInputArray = newRepeatCounter.ToCharArray(wordInput);
-      char[] comparison = {'b', 'o', 'y', ' '};
+      char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', 'g', ' '};
       //Act
       char[] result = newRepeatCounter.ReplaceSpecialCharacters(wordInputArray);
       //Assert
-      Assert.AreEqual(result[3], comparison[3]);
+      Assert.AreEqual(result[3], comparison[7]);
     }
+
 
     // [TestMethod]
     // public void IsAlphabetChar_ChecksIfWordInputIsAnAlphabetCharacter_charArray()

@@ -8,6 +8,7 @@ namespace WordCounter
     private string _wordInput;
     private string _sentenceInput;
     private static List<char> _alphabet = new List<char> {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z', ' '};
+    private static List<char> _numbers = new List<char> {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
 
     public RepeatCounter(string wordInput, string sentenceInput)
     {
@@ -28,6 +29,12 @@ namespace WordCounter
     public List<char> GetAlphabet()
     {
       return _alphabet;
+    }
+
+    public List<char> GetNumbers()
+    {
+      List<char> empty = new List<char> {};
+      return empty;
     }
 
     public string MakeLowerCase(string userInput)
@@ -76,6 +83,25 @@ namespace WordCounter
       }
       return userInputArray;
     }
+
+    // public bool IsInputValid(char[] userInputArray)
+    // {
+    //   List<char> alphabet = GetAlphabet();
+    //   List<char> numbers
+    //   for (int i = 0; i < userInputArray.Length; i++)
+    //   {
+    //     for (int j = 0; j < alphabet.Count; j++)
+    //     {
+    //       if (userInputArray[i] != alphabet[i])
+    //       {
+    //         userInputArray[i] = ' ';
+    //       }
+    //     }
+    //   }
+    //   return userInputArray;
+    // }
+
+
 
     // public char[] IsAlphabetChar(char[] userInput)
     // {
