@@ -65,7 +65,7 @@ namespace WordCounter.Tests
     public void IsAlphabetChar_ChecksIfInputIsAnAlphabetCharacter_bool()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("ab3", "test sentence");
+      RepeatCounter newRepeatCounter = new RepeatCounter("abc", "test sentence");
       string testString = newRepeatCounter.GetWordInput();
       char[] testArray = newRepeatCounter.ToCharArray(testString);
       //Act
