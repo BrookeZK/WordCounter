@@ -24,7 +24,18 @@ namespace WordCounter.Tests
       //Act
       string wordInput = newRepeatCounter.GetWordInput();
       //Assert
-      Assert.AreEqual("teste", wordInput);
+      Assert.AreEqual("test", wordInput);
+    }
+
+    [TestMethod]
+    public void GetSentenceInput_GetPrivatePropertyWordInput_stringSentenceInput()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
+      //Act
+      string sentenceInput = newRepeatCounter.GetSentenceInput();
+      //Assert
+      Assert.AreEqual("teste sentence", sentenceInput);
     }
 
     // [TestMethod]

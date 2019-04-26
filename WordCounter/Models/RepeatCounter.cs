@@ -19,6 +19,11 @@ namespace WordCounter
       return _wordInput;
     }
 
+    public string GetSentenceInput()
+    {
+      return _sentenceInput;
+    }
+
     // public bool IsAlphabetChar(string userInput)
     // {
     //   if (userInput == userInput)
