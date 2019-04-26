@@ -89,7 +89,7 @@ namespace WordCounter.Tests
       //Act
       int result = newRepeatCounter.CheckIfWordMatchSentence(wordInput, sentenceArray);
       //Assert
-      Assert.AreEqual(result, 3);
+      Assert.AreEqual(result, 4);
     }
 
     // [TestMethod]
