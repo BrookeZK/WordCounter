@@ -35,7 +35,7 @@ namespace WordCounter.Tests
       //Act
       string sentenceInput = newRepeatCounter.GetSentenceInput();
       //Assert
-      Assert.AreEqual("teste sentence", sentenceInput);
+      Assert.AreEqual("test sentence", sentenceInput);
     }
 
     // [TestMethod]
