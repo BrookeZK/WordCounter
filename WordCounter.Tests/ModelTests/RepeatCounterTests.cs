@@ -96,7 +96,7 @@ namespace WordCounter.Tests
     public void CheckIfWordMatchSentence_ChecksIfWordMatchesAWordInSentence_true()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("test", "sentence test");
+      RepeatCounter newRepeatCounter = new RepeatCounter("of", "sentence of test");
       string wordInput = newRepeatCounter.GetWordInput();
       string sentenceInput = newRepeatCounter.GetSentenceInput();
       string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);

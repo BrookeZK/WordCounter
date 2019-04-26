@@ -56,7 +56,14 @@ namespace WordCounter
 
     public bool CheckIfWordMatchSentence(string word, string[] sentence)
     {
-      return false;
+      for (int i = 0; i < sentence.Length; i++)
+      {
+        if (word == sentence[i])
+        {
+          return true;
+        }
+      }
+        return false;
     }
 
     // public char[] IsAlphabetChar(char[] userInput)
