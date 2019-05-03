@@ -37,25 +37,21 @@ namespace WordCounter
             return userInputArray;
         }
 
-        // public bool IsInputValid(char[] userInputArray)
-        // {
-        //     List<char> numbers = GetNumbers();
-        //     for (int i = 0; i < userInputArray.Length; i++)
-        //     {
-        //         for (int j = 0; j < numbers.Count; j++)
-        //         {
-        //             if (userInputArray[i] == numbers[j])
-        //             {
-        //                 return false;
-        //             }
-        //             else
-        //             {
-        //                 i++;
-        //             }
-        //         }
-        //     }
-        //     return true;
-        // }
+        public bool IsInputValid()
+        {
+            char[] userInputArray = _wordInput.ToCharArray();
+            for (int i = 0; i < userInputArray.Length; i++)
+            {
+                for (int j = 0; j < _numbers.Count; j++)
+                {
+                    if (userInputArray[i] == _numbers[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
 
         public int CheckIfWordMatchSentence()
         {
