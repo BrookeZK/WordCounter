@@ -70,16 +70,3 @@ namespace WordCounter
     }
 
 }
-
-
-// public char[] ToCharArray()
-// {
-//     char[] userInputCharArray = _wordInput.ToCharArray();
-//     return userInputCharArray;
-// }
-
-// public string[] MakeSentenceArray(string _sentenceInput)
-// {
-//     string[] sentenceInputArray = _sentenceInput.Split(' ');
-//     return sentenceInputArray;
-// }

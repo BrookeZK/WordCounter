@@ -98,35 +98,3 @@ namespace WordCounter.Tests
 
     }
 }
-
-
-
-
-
-
-
-
-// [TestMethod]
-// public void ToCharArray_TurnsUserInputIntoAnArrayOfChars_CharArray()
-// {
-//     //Arrange
-//     RepeatCounter newRepeatCounter = new RepeatCounter("b12", "test sentence");
-//     string wordInput = newRepeatCounter.WordInput;
-//     //Act
-//     char[] result = newRepeatCounter.ToCharArray(wordInput);
-//     //Assert
-//     Assert.AreEqual(result[2], '2');
-// }
-
-// [TestMethod]
-// public void MakeSentenceArray_MakeASentenceStringIntoAnArrayOfStrings_StringArray()
-// {
-//     //Arrange
-//     RepeatCounter newRepeatCounter = new RepeatCounter("test", "this is a test sentence");
-//     string sentenceInput = newRepeatCounter.SentenceInput;
-//     string[] compareArray = { "this", "is", "a", "test", "sentence" };
-//     //Act
-//     string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
-//     //Assert
-//     Assert.AreEqual(sentenceArray[0], compareArray[0]);
-// }
