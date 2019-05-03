@@ -24,6 +24,7 @@ namespace WordCounter.Models
         public int InstancesOfMatch{ get => _instancesOfMatch; set => _instancesOfMatch = value;}
         public List<char> Alphabet{ get => _alphabet; set => _alphabet = value; }
         public List<char> Numbers{ get => _numbers; set => _numbers = value; }
+        public List<RepeatCounter> Instances { get => _instances; }
 
         public char[] ReplaceSpecialCharacters()
         {
