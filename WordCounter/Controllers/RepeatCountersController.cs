@@ -10,8 +10,8 @@ namespace WordCounter.Controllers
     [HttpGet("/repeat-counter")]
     public ActionResult Index()
     {
-      RepeatCounter newRepeatCounter = new RepeatCounter("word", "test sentence with word");
-      return View(newRepeatCounter);
+      // RepeatCounter newRepeatCounter = new RepeatCounter("word", "test sentence with word");
+      return View();
     }
 
     // [HttpPost("/game")]

@@ -10,11 +10,13 @@ namespace WordCounter.Models
         private int _instancesOfMatch = 0;
         private static List<char> _alphabet = new List<char> {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z', ' '};
         private static List<char> _numbers = new List<char> {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+        private static List<RepeatCounter> _instances = new List<RepeatCounter> { };
 
         public RepeatCounter(string wordInput, string sentenceInput)
         {
             _wordInput = wordInput.ToLower();
             _sentenceInput = sentenceInput;
+            _instances.Add(this);
         }
 
         public string WordInput{ get => _wordInput; set => _wordInput = value; }
