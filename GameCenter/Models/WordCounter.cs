@@ -3,7 +3,7 @@ using System;
 
 namespace GameCenter.Models
 {
-    public class RepeatCounter
+    public class WordCounter
     {
         private string _wordInput;
         private string _sentenceInput;
@@ -11,9 +11,9 @@ namespace GameCenter.Models
         // private string _comparisonString;
         private static List<char> _alphabet = new List<char> {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z', ' '};
         private static List<char> _numbers = new List<char> {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
-        private static List<RepeatCounter> _instances = new List<RepeatCounter> { };
+        private static List<WordCounter> _instances = new List<WordCounter> { };
 
-        public RepeatCounter(string wordInput, string sentenceInput)
+        public WordCounter(string wordInput, string sentenceInput)
         {
             _wordInput = wordInput;
             _sentenceInput = sentenceInput;
@@ -26,14 +26,14 @@ namespace GameCenter.Models
         // public string ComparisonString{ get => _comparisonString; set => _comparisonString = value;}
         public List<char> Alphabet{ get => _alphabet; set => _alphabet = value; }
         public List<char> Numbers{ get => _numbers; set => _numbers = value; }
-        public List<RepeatCounter> Instances { get => _instances; }
+        public List<WordCounter> Instances { get => _instances; }
 
         public static void ClearAll()
         {
             _instances.Clear();
         }
 
-        public static List<RepeatCounter> GetAll()
+        public static List<WordCounter> GetAll()
         {
             return _instances;
         }

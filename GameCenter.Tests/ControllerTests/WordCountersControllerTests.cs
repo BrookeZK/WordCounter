@@ -8,13 +8,13 @@ using System;
 namespace GameCenter.Tests
 {
     [TestClass]
-    public class RepeatCountersControllerTest
+    public class WordCountersControllerTest
     {
         [TestMethod]
         public void Index_ReturnsCorrectView_True()
         {
             //Arrange
-            RepeatCountersController controller = new RepeatCountersController();
+            WordCountersController controller = new WordCountersController();
 
             //Act
             ActionResult indexView = controller.Index();
@@ -27,7 +27,7 @@ namespace GameCenter.Tests
         public void New_ReturnsCorrectView_True()
         {
             //Arrange
-            RepeatCountersController controller = new RepeatCountersController();
+            WordCountersController controller = new WordCountersController();
 
             //Act
             ActionResult newView = controller.New();
@@ -35,19 +35,5 @@ namespace GameCenter.Tests
             //Assert
             Assert.IsInstanceOfType(newView, typeof(ViewResult));
         }
-
-        // [TestMethod]
-        // public void Create_RedirectsToCorrectAction_Index()
-        // {
-        //     //Arrange
-        //     ItemsController controller = new ItemsController();
-        //     RedirectToActionResult actionResult = controller.Create("Walk the dog") as RedirectToActionResult;
-        //
-        //     //Act
-        //     string result = actionResult.ActionName;
-        //
-        //     //Assert
-        //     Assert.AreEqual(result, "Index");
-        // }
     }
 }

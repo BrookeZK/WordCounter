@@ -19,7 +19,7 @@ body {
     color: pink;
 }
 
-#repeatCounter h1 {
+#wordCounter h1 {
     text-align: center;
     /* align-items: center; */
     font-family: 'ZCOOL KuaiLe', cursive;
