@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+<div id="repeatCounter">
+  <h1>Welcome to the Word Counter</h1>
+  <h2>If you are looking for a program to count how many times a word appears in your sentence...</h2>
+  <h2><em><strong>...look no further!</strong></em><h2>
+  <a href="/repeat-counter/new" class="myButton">Start New Query</a>
+  <div id="wordCountHistory">
+    <p>Your word "@Model.WordInput" appeared in "@Model.SentenceInput" @Model.InstancesOfMatch times/<p>
+  </div>
+</div>
