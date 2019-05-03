@@ -1,5 +1,17 @@
 @{
   Layout = "_Layout";
 }
+<div class="createNew">
+  <h1>Make A New Word Count</h1>
 
-<h1>New Query</h1>
+<form action="/repeat-counter" method="post">
+  <label for="wordInput">Please enter the word you would like to count:</label>
+  <input id="wordInput" name="wordInput" type="text">
+  <label for="sentenceInput">Please enter your sentence:</label>
+  <input id="sentenceInput" name="sentenceInput" type="text">
+  <button type="submit">Submit</button>
+</form>
+
+<p><a href="/repeat-counter">Back to Word Count</a></p>
+<p><a href="/">Back home</a></p>
+</div>

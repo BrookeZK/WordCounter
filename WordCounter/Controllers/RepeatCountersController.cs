@@ -10,14 +10,27 @@ namespace WordCounter.Controllers
     [HttpGet("/repeat-counter")]
     public ActionResult Index()
     {
-      List<RepeatCounter> testList = new List<RepeatCounter> {};
-      return View(testList);
+      List<RepeatCounter> allRepeatCounters = RepeatCounter.GetAll();
+      return View(allRepeatCounters);
     }
 
     [HttpGet("/repeat-counter/new")]
     public ActionResult New()
     {
       return View();
+    }
+
+    [HttpPost("/repeat-counter")]
+    public ActionResult Create(string wordInput, string sentenceInput)
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter(wordInput, sentenceInput);
+      newRepeatCounter.ReplaceSpecialCharacters(word);
+      newRepeatCounter.ReplaceSpecialCharacters(sentence);
+      newRepeatCounter.IsInputValid(word);
+      newRepeatCounter.IsInputValid(sentence);
+      newRepeatCounter.CheckIfWordMatchSentence();
+      List<RepeatCounter> allRepeatCounters = RepeatCounter.GetAll();
+      return RedirectToAction("Index", allRepeatCounters);
     }
 
     // [HttpPost("/game")]

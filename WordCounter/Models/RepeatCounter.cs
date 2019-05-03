@@ -14,7 +14,7 @@ namespace WordCounter.Models
 
         public RepeatCounter(string wordInput, string sentenceInput)
         {
-            _wordInput = wordInput.ToLower();
+            _wordInput = wordInput;
             _sentenceInput = sentenceInput;
             _instances.Add(this);
         }
@@ -26,9 +26,20 @@ namespace WordCounter.Models
         public List<char> Numbers{ get => _numbers; set => _numbers = value; }
         public List<RepeatCounter> Instances { get => _instances; }
 
-        public char[] ReplaceSpecialCharacters()
+//NEW
+        public static void ClearAll()
         {
-            char[] userInputArray = _wordInput.ToCharArray();
+          _instances.Clear();
+        }
+
+        public static List<RepeatCounter> GetAll()
+        {
+          return _instances;
+        }
+
+        public char[] ReplaceSpecialCharacters(string userInput)
+        {
+            char[] userInputArray = userInput.ToCharArray();
             for (int i = 0; i < userInputArray.Length; i++)
             {
                 for (int j = 0; j < _alphabet.Count; j++)
@@ -42,9 +53,9 @@ namespace WordCounter.Models
             return userInputArray;
         }
 
-        public bool IsInputValid()
+        public bool IsInputValid(string userInput)
         {
-            char[] userInputArray = _wordInput.ToCharArray();
+          char[] userInputArray = userInput.ToCharArray();
             for (int i = 0; i < userInputArray.Length; i++)
             {
                 for (int j = 0; j < _numbers.Count; j++)
@@ -60,7 +71,8 @@ namespace WordCounter.Models
 
         public int CheckIfWordMatchSentence()
         {
-            string[] sentenceArray = _sentenceInput.Split(' ');
+            string userSentence = _sentenceInput;
+            string[] sentenceArray = userSentence.Split(' ');
             for (int i = 0; i < sentenceArray.Length; i++)
             {
                 if (_wordInput == sentenceArray[i])

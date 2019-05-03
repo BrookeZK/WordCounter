@@ -1,26 +1,36 @@
 body {
   background-image: url("../img/background.gif");
   background-size: cover;
-}
-
-#homePage {
   text-align: center;
   align-items: center;
   font-family: 'ZCOOL KuaiLe', cursive;
   color: pink;
+}
+
+.createNew  {
+  text-align: center;
+  align-items: center;
+}
+#homePage {
+  /* text-align: center;
+  align-items: center;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: pink; */
 }
 
 #repeatCounter {
-  text-align: center;
+  /* text-align: center;
   align-items: center;
   font-family: 'ZCOOL KuaiLe', cursive;
-  color: pink;
+  color: pink; */
 }
 
 h1  {
   font-family: 'ZCOOL KuaiLe', cursive;
   font-size: 100px;
   color: pink;
+  text-align: center;
+  align-items: center;
 }
 
 p {

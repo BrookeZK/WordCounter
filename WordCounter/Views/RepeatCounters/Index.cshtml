@@ -14,7 +14,7 @@
     }
     else
     {
-      @foreach (var instance in Model.Instances)
+      @foreach (var instance in Model)
       {
       <div class="responseDisplay">
         <p>Your word <strong>"@instance.WordInput"</strong> appeared in <strong>"@instance.SentenceInput"</strong> <strong>@instance.InstancesOfMatch</strong> times</p>
