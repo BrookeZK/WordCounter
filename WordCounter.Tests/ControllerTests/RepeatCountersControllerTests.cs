@@ -10,19 +10,19 @@ namespace WordCounter.Tests
   [TestClass]
   public class RepeatCountersControllerTest
   {
-    // [TestMethod]
-    // public void Create_ReturnsCorrectActionType_RedirectToActionResult()
-    // {
-    //     //Arrange
-    //     ItemsController controller = new ItemsController();
-    //
-    //     //Act
-    //     IActionResult view = controller.Create("Walk the dog");
-    //
-    //     //Assert
-    //     Assert.IsInstanceOfType(view, typeof(RedirectToActionResult));
-    // }
-    //
+    [TestMethod]
+    public void Create_ReturnsCorrectView_True()
+    {
+        //Arrange
+        RepeatCountersController controller = new RepeatCountersController();
+
+        //Act
+        ActionResult indexView = controller.Index();
+
+        //Assert
+        Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+    }
+
     // [TestMethod]
     // public void Create_RedirectsToCorrectAction_Index()
     // {
