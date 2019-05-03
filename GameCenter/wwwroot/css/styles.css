@@ -26,6 +26,13 @@ body {
     color: pink;
 }
 
+#playHangMan {
+  text-align: center;
+  align-items: center;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: pink;
+}
+
 .special{
     color: purple;
 }
