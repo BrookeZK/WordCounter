@@ -1,6 +1,6 @@
-# _Word Counter_
+# _Game Center: Word Counter_
 
-#### _A Program that counts how many times a word appears in your sentence, 04.26.2019_
+#### _A Program counts how many times a word appears in your sentence, 04.26.2019_
 
 #### By _Brooke Kullberg_
 
