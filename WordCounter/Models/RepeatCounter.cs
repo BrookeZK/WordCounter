@@ -12,44 +12,23 @@ namespace WordCounter
 
         public RepeatCounter(string wordInput, string sentenceInput)
         {
-            _wordInput = wordInput;
+            _wordInput = wordInput.ToLower();
             _sentenceInput = sentenceInput;
         }
 
-        public string GetWordInput()
-        {
-           return _wordInput;
-        }
-
-        public string GetSentenceInput()
-        {
-            return _sentenceInput;
-        }
-
-        public List<char> GetAlphabet()
-        {
-            return _alphabet;
-        }
-
-        public List<char> GetNumbers()
-        {
-            return _numbers;
-        }
-
-        public string MakeLowerCase(string userInput)
-        {
-            string lowerUserInput = userInput.ToLower();
-            return lowerUserInput;
-        }
+        public string WordInput{ get => _wordInput; set => _wordInput = value; }
+        public string SentenceInput{ get => _sentenceInput; set => _sentenceInput = value; }
+        public List<char> Alphabet{ get => _alphabet; set => _alphabet = value; }
+        public List<char> Numbers{ get => _numbers; set => _numbers = value; }
 
         public char[] ReplaceSpecialCharacters(char[] userInputArray)
         {
-            List<char> alphabet = GetAlphabet();
+            // List<char> alphabet = RepeatCounter.Alphabet;
             for (int i = 0; i < userInputArray.Length; i++)
             {
-                for (int j = 0; j < alphabet.Count; j++)
+                for (int j = 0; j < _alphabet.Count; j++)
                 {
-                    if (userInputArray[i] != alphabet[j])
+                    if (userInputArray[i] != _alphabet[j])
                     {
                         userInputArray[i] = ' ';
                     }

@@ -23,7 +23,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
             //Act
-            string wordInput = newRepeatCounter.GetWordInput();
+            string wordInput = newRepeatCounter.WordInput;
             //Assert
             Assert.AreEqual("test", wordInput);
         }
@@ -34,7 +34,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
             //Act
-            string sentenceInput = newRepeatCounter.GetSentenceInput();
+            string sentenceInput = newRepeatCounter.SentenceInput;
             //Assert
             Assert.AreEqual("test sentence", sentenceInput);
         }
@@ -45,7 +45,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
             //Act
-            List<char> alphaList = newRepeatCounter.GetAlphabet();
+            List<char> alphaList = newRepeatCounter.Alphabet;
             //Assert
             Assert.AreEqual('a', alphaList[0]);
         }
@@ -57,31 +57,16 @@ namespace WordCounter.Tests
             RepeatCounter newRepeatCounter = new RepeatCounter("test", "test sentence");
             List<char> comparisonList = new List<char> {'0', '2', '3', '4', '5', '6', '7', '8', '9', '1'};
             //Act
-            List<char> numList = newRepeatCounter.GetNumbers();
+            List<char> numList = newRepeatCounter.Numbers;
             //Assert
             CollectionAssert.AreEquivalent(numList, comparisonList);
-        }
-
-        [TestMethod]
-        public void MakeLowerCase_TurnUserInputToAllLowerCase_string()
-        {
-            //Arrange
-            RepeatCounter newRepeatCounter = new RepeatCounter("teSt", "tEst senteNce");
-            string wordInput = newRepeatCounter.GetWordInput();
-            string sentenceInput = newRepeatCounter.GetSentenceInput();
-            //Act
-            string lowerWordInput = newRepeatCounter.MakeLowerCase(wordInput);
-            string lowerSentenceInput = newRepeatCounter.MakeLowerCase(sentenceInput);
-            //Assert
-            Assert.AreEqual("test", lowerWordInput);
-            Assert.AreEqual("test sentence", lowerSentenceInput);
         }
 
         [TestMethod]
         public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_CharArray()
         {
             RepeatCounter newRepeatCounter = new RepeatCounter("boy.dog.", "test sentence");
-            string wordInput = newRepeatCounter.GetWordInput();
+            string wordInput = newRepeatCounter.WordInput;
             char[] wordInputArray = newRepeatCounter.ToCharArray(wordInput);
             char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', 'g', ' '};
             //Act
@@ -91,7 +76,7 @@ namespace WordCounter.Tests
         }
 
         // [TestMethod]
-        // public void IsInputValid_ChecksIfWordInputIsAnAlphabetCharacter_bool()
+        // public void IsInputValid_ChecksIfWordInputIsAnAlphabetCharacter_CharArray()
         // {
         //     //Arrange
         //     RepeatCounter newRepeatCounter = new RepeatCounter("xab", "test sentence");
@@ -109,7 +94,7 @@ namespace WordCounter.Tests
         {
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("b12", "test sentence");
-            string wordInput = newRepeatCounter.GetWordInput();
+            string wordInput = newRepeatCounter.WordInput;
             //Act
             char[] result = newRepeatCounter.ToCharArray(wordInput);
             //Assert
@@ -121,7 +106,7 @@ namespace WordCounter.Tests
         {
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("test", "this is a test sentence");
-            string sentenceInput = newRepeatCounter.GetSentenceInput();
+            string sentenceInput = newRepeatCounter.SentenceInput;
             string[] compareArray = { "this", "is", "a", "test", "sentence" };
             //Act
             string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
@@ -134,8 +119,8 @@ namespace WordCounter.Tests
         {
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("the", "the cat and the dog");
-            string wordInput = newRepeatCounter.GetWordInput();
-            string sentenceInput = newRepeatCounter.GetSentenceInput();
+            string wordInput = newRepeatCounter.WordInput;
+            string sentenceInput = newRepeatCounter.SentenceInput;
             string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
             //Act
             int result = newRepeatCounter.CheckIfWordMatchSentence(wordInput, sentenceArray);
