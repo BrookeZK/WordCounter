@@ -66,11 +66,9 @@ namespace WordCounter.Tests
         public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_CharArray()
         {
             RepeatCounter newRepeatCounter = new RepeatCounter("boy.dog.", "test sentence");
-            string wordInput = newRepeatCounter.WordInput;
-            char[] wordInputArray = newRepeatCounter.ToCharArray(wordInput);
             char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', 'g', ' '};
             //Act
-            char[] result = newRepeatCounter.ReplaceSpecialCharacters(wordInputArray);
+            char[] result = newRepeatCounter.ReplaceSpecialCharacters();
             //Assert
             Assert.AreEqual(result[3], comparison[7]);
         }
@@ -89,44 +87,49 @@ namespace WordCounter.Tests
         //     Assert.AreEqual(true, result);
         // }
 
-        [TestMethod]
-        public void ToCharArray_TurnsUserInputIntoAnArrayOfChars_CharArray()
-        {
-            //Arrange
-            RepeatCounter newRepeatCounter = new RepeatCounter("b12", "test sentence");
-            string wordInput = newRepeatCounter.WordInput;
-            //Act
-            char[] result = newRepeatCounter.ToCharArray(wordInput);
-            //Assert
-            Assert.AreEqual(result[2], '2');
-        }
-
-        [TestMethod]
-        public void MakeSentenceArray_MakeASentenceStringIntoAnArrayOfStrings_StringArray()
-        {
-            //Arrange
-            RepeatCounter newRepeatCounter = new RepeatCounter("test", "this is a test sentence");
-            string sentenceInput = newRepeatCounter.SentenceInput;
-            string[] compareArray = { "this", "is", "a", "test", "sentence" };
-            //Act
-            string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
-            //Assert
-            Assert.AreEqual(sentenceArray[0], compareArray[0]);
-        }
 
         [TestMethod]
         public void CheckIfWordMatchSentence_ChecksIfWordMatchesAWordInSentence_int()
         {
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("the", "the cat and the dog");
-            string wordInput = newRepeatCounter.WordInput;
-            string sentenceInput = newRepeatCounter.SentenceInput;
-            string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
             //Act
-            int result = newRepeatCounter.CheckIfWordMatchSentence(wordInput, sentenceArray);
+            int result = newRepeatCounter.CheckIfWordMatchSentence();
             //Assert
             Assert.AreEqual(2, result);
         }
 
     }
 }
+
+
+
+
+
+
+
+
+// [TestMethod]
+// public void ToCharArray_TurnsUserInputIntoAnArrayOfChars_CharArray()
+// {
+//     //Arrange
+//     RepeatCounter newRepeatCounter = new RepeatCounter("b12", "test sentence");
+//     string wordInput = newRepeatCounter.WordInput;
+//     //Act
+//     char[] result = newRepeatCounter.ToCharArray(wordInput);
+//     //Assert
+//     Assert.AreEqual(result[2], '2');
+// }
+
+// [TestMethod]
+// public void MakeSentenceArray_MakeASentenceStringIntoAnArrayOfStrings_StringArray()
+// {
+//     //Arrange
+//     RepeatCounter newRepeatCounter = new RepeatCounter("test", "this is a test sentence");
+//     string sentenceInput = newRepeatCounter.SentenceInput;
+//     string[] compareArray = { "this", "is", "a", "test", "sentence" };
+//     //Act
+//     string[] sentenceArray = newRepeatCounter.MakeSentenceArray(sentenceInput);
+//     //Assert
+//     Assert.AreEqual(sentenceArray[0], compareArray[0]);
+// }

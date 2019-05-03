@@ -21,9 +21,9 @@ namespace WordCounter
         public List<char> Alphabet{ get => _alphabet; set => _alphabet = value; }
         public List<char> Numbers{ get => _numbers; set => _numbers = value; }
 
-        public char[] ReplaceSpecialCharacters(char[] userInputArray)
+        public char[] ReplaceSpecialCharacters()
         {
-            // List<char> alphabet = RepeatCounter.Alphabet;
+            char[] userInputArray = _wordInput.ToCharArray();
             for (int i = 0; i < userInputArray.Length; i++)
             {
                 for (int j = 0; j < _alphabet.Count; j++)
@@ -57,24 +57,13 @@ namespace WordCounter
         //     return true;
         // }
 
-        public char[] ToCharArray(string userInput)
+        public int CheckIfWordMatchSentence()
         {
-            char[] userInputCharArray = userInput.ToCharArray();
-            return userInputCharArray;
-        }
-
-        public string[] MakeSentenceArray(string sentenceInput)
-        {
-            string[] sentenceInputArray = sentenceInput.Split(' ');
-            return sentenceInputArray;
-        }
-
-        public int CheckIfWordMatchSentence(string word, string[] sentence)
-        {
+            string[] sentenceArray = _sentenceInput.Split(' ');
             int instancesOfMatch = 0;
-            for (int i = 0; i < sentence.Length; i++)
+            for (int i = 0; i < sentenceArray.Length; i++)
             {
-                if (word == sentence[i])
+                if (_wordInput == sentenceArray[i])
                 {
                     instancesOfMatch++;
                 }
@@ -85,3 +74,16 @@ namespace WordCounter
     }
 
 }
+
+
+// public char[] ToCharArray()
+// {
+//     char[] userInputCharArray = _wordInput.ToCharArray();
+//     return userInputCharArray;
+// }
+
+// public string[] MakeSentenceArray(string _sentenceInput)
+// {
+//     string[] sentenceInputArray = _sentenceInput.Split(' ');
+//     return sentenceInputArray;
+// }
