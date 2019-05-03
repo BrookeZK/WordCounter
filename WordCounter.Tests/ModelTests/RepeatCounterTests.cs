@@ -1,12 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WordCounter.Models;
 using System.Collections.Generic;
+using System;
 
 namespace WordCounter.Tests
 {
     [TestClass]
-    public class RepeatCounterTest
+    public class RepeatCounterTest : IDisposable
     {
+        public void Dispose()
+        {
+          RepeatCounter.ClearAll();
+        }
+
         [TestMethod]
         public void RepeatCounterConstructor_MakeANewInstanceOfRepeatCounterClass_RepeatCounter()
         {
@@ -67,8 +73,9 @@ namespace WordCounter.Tests
         {
             RepeatCounter newRepeatCounter = new RepeatCounter("boy.dog.", "test sentence");
             char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', 'g', ' '};
+            string testString = "boy.dog.";
             //Act
-            char[] result = newRepeatCounter.ReplaceSpecialCharacters();
+            char[] result = newRepeatCounter.ReplaceSpecialCharacters(testString);
             //Assert
             Assert.AreEqual(result[3], comparison[7]);
         }
@@ -78,8 +85,9 @@ namespace WordCounter.Tests
         {
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter("xjxsd", "test sentence");
+            string testString = "xjxsd";
             //Act
-            bool result = newRepeatCounter.IsInputValid();
+            bool result = newRepeatCounter.IsInputValid(testString);
             //Assert
             Assert.AreEqual(true, result);
         }
@@ -94,6 +102,25 @@ namespace WordCounter.Tests
             int result = newRepeatCounter.CheckIfWordMatchSentence();
             //Assert
             Assert.AreEqual(2, result);
+        }
+
+        [TestMethod]
+        public void GetAll_ReturnsAllRepeatCounterObjects_RepeatCounterList()
+        {
+          //Arrange
+          string word1 = "Work";
+          string sentence1 = "I love my Work";
+          string word2 = "Happy";
+          string sentence2 = "Happy days";
+          RepeatCounter newRepeatCounter1 = new RepeatCounter(word1, sentence1);
+          RepeatCounter newRepeatCounter2 = new RepeatCounter(word2, sentence2);
+          List<RepeatCounter> newList = new List<RepeatCounter> { newRepeatCounter1, newRepeatCounter2 };
+
+          //Act
+          List<RepeatCounter> result = RepeatCounter.GetAll();
+
+          //Assert
+          CollectionAssert.AreEqual(newList, result);
         }
 
     }

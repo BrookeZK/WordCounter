@@ -24,11 +24,11 @@ namespace WordCounter.Controllers
     public ActionResult Create(string wordInput, string sentenceInput)
     {
       RepeatCounter newRepeatCounter = new RepeatCounter(wordInput, sentenceInput);
-      newRepeatCounter.ReplaceSpecialCharacters(word);
-      newRepeatCounter.ReplaceSpecialCharacters(sentence);
-      newRepeatCounter.IsInputValid(word);
-      newRepeatCounter.IsInputValid(sentence);
-      newRepeatCounter.CheckIfWordMatchSentence();
+      // newRepeatCounter.ReplaceSpecialCharacters(word);
+      // newRepeatCounter.ReplaceSpecialCharacters(sentence);
+      // newRepeatCounter.IsInputValid(word);
+      // newRepeatCounter.IsInputValid(sentence);
+      // newRepeatCounter.CheckIfWordMatchSentence();
       List<RepeatCounter> allRepeatCounters = RepeatCounter.GetAll();
       return RedirectToAction("Index", allRepeatCounters);
     }

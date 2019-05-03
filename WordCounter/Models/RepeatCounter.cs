@@ -26,7 +26,6 @@ namespace WordCounter.Models
         public List<char> Numbers{ get => _numbers; set => _numbers = value; }
         public List<RepeatCounter> Instances { get => _instances; }
 
-//NEW
         public static void ClearAll()
         {
           _instances.Clear();
