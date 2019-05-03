@@ -1,0 +1,38 @@
+@{
+  Layout = "_Layout";
+}
+<div id="repeatCounter">
+    <h1>Word Counter</h1>
+    <div class="wrapper">
+        <div id="box box-1">
+            <h2>If you are looking for a program to count how many times a word appears in your sentence...</h2>
+            <h2><em><strong>...look no further!</strong></em><h2>
+            <a href="/repeat-counter/new" class="myButton">Start New Count</a><br><br>
+            <form action="/repeat-counter/delete" method="post">
+                <button class="myButton" type="submit" name="button">Clear History</button>
+            </form>
+        </div>
+        <div id="box box-2">
+            <div id="wordCountHistory">
+            <h3>Word Count History</h3>
+            @if(@Model.Count == 0)
+            {
+                <p>|</p>
+                <p>|</p>
+                <p>|</p>
+                <p>|</p>
+                <h2>*~You have no Word Count history~*</h2>
+            }
+            else
+            {
+                @foreach (var instance in Model)
+                {
+                <div class="responseDisplay">
+                    <p>Your word <strong class="special">"@instance.WordInput"</strong> appeared <strong class="special">@instance.InstancesOfMatch</strong> times in <strong class="special">"@instance.SentenceInput"</strong></p>
+                </div>
+                }
+            }
+            </div>
+        </div>
+    </dv>
+</div>
