@@ -1,28 +1,50 @@
 body {
   background-image: url("../img/background.gif");
   background-size: cover;
+}
+
+.createNew  {
+  text-align: center;
+  align-items: center;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: pink;
+  font-size: 30px;
+  line-height: 70px;
+  /* padding: 20px; */
+}
+#homePage {
   text-align: center;
   align-items: center;
   font-family: 'ZCOOL KuaiLe', cursive;
   color: pink;
 }
 
-.createNew  {
+#repeatCounter h1 {
   text-align: center;
-  align-items: center;
-}
-#homePage {
-  /* text-align: center;
-  align-items: center;
+  /* align-items: center; */
   font-family: 'ZCOOL KuaiLe', cursive;
-  color: pink; */
+  color: pink;
 }
 
-#repeatCounter {
-  /* text-align: center;
+.special{
+  color: purple;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+}
+
+.wrapper > div{
+  padding: 40px;
+  background-image: linear-gradient(rgb(198, 173, 255, 0.8), rgb(255, 173, 244, 0.7));
+  margin: 40px;
+  border: 4px solid pink;
+  text-align: center;
   align-items: center;
   font-family: 'ZCOOL KuaiLe', cursive;
-  color: pink; */
+  color: grey;
 }
 
 h1  {
@@ -33,10 +55,19 @@ h1  {
   align-items: center;
 }
 
+h3 {
+    font-size: 30px;
+    text-decoration: underline;
+    color: purple;
+}
+
 p {
   font-size: 20px;
 }
 
+input{
+  color: purple;
+}
 /* footer {
   color: aqua;
   font-size: 25px;
@@ -83,6 +114,8 @@ p {
 	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
 	background-color:#bc80ea;
+  color: white;
+  text-decoration: none;
 }
 .myButton:active {
 	position:relative;

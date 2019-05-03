@@ -29,5 +29,13 @@ namespace WordCounter.Controllers
       return RedirectToAction("Index", allRepeatCounters);
     }
 
+    [HttpPost("/repeat-counter/delete")]
+    public ActionResult DeleteAll()
+    {
+
+      RepeatCounter.ClearAll();
+      return View();
+    }
+
   }
 }
