@@ -28,7 +28,7 @@ namespace WordCounter.Controllers
       // newRepeatCounter.ReplaceSpecialCharacters(sentence);
       // newRepeatCounter.IsInputValid(word);
       // newRepeatCounter.IsInputValid(sentence);
-      // newRepeatCounter.CheckIfWordMatchSentence();
+      newRepeatCounter.CheckIfWordMatchSentence();
       List<RepeatCounter> allRepeatCounters = RepeatCounter.GetAll();
       return RedirectToAction("Index", allRepeatCounters);
     }
