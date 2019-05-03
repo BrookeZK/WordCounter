@@ -68,17 +68,21 @@ namespace WordCounter.Tests
             CollectionAssert.AreEquivalent(numList, comparisonList);
         }
 
-        [TestMethod]
-        public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_CharArray()
-        {
-            RepeatCounter newRepeatCounter = new RepeatCounter("boy.dog.", "test sentence");
-            char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', 'g', ' '};
-            string testString = "boy.dog.";
-            //Act
-            char[] result = newRepeatCounter.ReplaceSpecialCharacters(testString);
-            //Assert
-            Assert.AreEqual(result[3], comparison[7]);
-        }
+        // [TestMethod]
+        // public void ReplaceSpecialCharacters_RemoveSpecialCharacterFromArrayOfChar_charArray()
+        // {
+        //     RepeatCounter newRepeatCounter = new RepeatCounter("boy.do.g", "test sentence");
+        //     char[] comparison = {'b', 'o', 'y', ' ', 'd', 'o', ' ', 'g'};
+        //     string comparison2 = newRepeatCounter.ComparisonString;
+        //     string testString = "boy do g";
+        //     //Act
+        //     char[] result = newRepeatCounter.ReplaceSpecialCharacters(testString);
+        //     //Assert
+        //     Console.WriteLine(comparison2);
+        //     Assert.AreEqual(comparison[6], result[4]);
+        // }
+
+
 
         [TestMethod]
         public void IsInputValid_ChecksIfWordInputIsAnAlphabetCharacter_False()

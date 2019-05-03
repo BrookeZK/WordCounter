@@ -24,26 +24,10 @@ namespace WordCounter.Controllers
     public ActionResult Create(string wordInput, string sentenceInput)
     {
       RepeatCounter newRepeatCounter = new RepeatCounter(wordInput, sentenceInput);
-      // newRepeatCounter.ReplaceSpecialCharacters(word);
-      // newRepeatCounter.ReplaceSpecialCharacters(sentence);
-      // newRepeatCounter.IsInputValid(word);
-      // newRepeatCounter.IsInputValid(sentence);
       newRepeatCounter.CheckIfWordMatchSentence();
       List<RepeatCounter> allRepeatCounters = RepeatCounter.GetAll();
       return RedirectToAction("Index", allRepeatCounters);
     }
-
-    // [HttpPost("/game")]
-    // public ActionResult Update(string userLetter)
-    // {
-    //   // char converted;
-    //   // bool userChar = Char.TryParse(userLetter, out converted);
-    //
-    //   char newChar = userLetter[0];
-    //   Game thisGame = Game.FindGame();
-    //   thisGame.DoesContainChar(newChar);
-    //   return View("Index", thisGame);
-    // }
 
   }
 }
