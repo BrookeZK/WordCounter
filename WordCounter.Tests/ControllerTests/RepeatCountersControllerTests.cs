@@ -11,7 +11,7 @@ namespace WordCounter.Tests
   public class RepeatCountersControllerTest
   {
     [TestMethod]
-    public void Create_ReturnsCorrectView_True()
+    public void Index_ReturnsCorrectView_True()
     {
         //Arrange
         RepeatCountersController controller = new RepeatCountersController();
@@ -21,6 +21,19 @@ namespace WordCounter.Tests
 
         //Assert
         Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+    }
+
+    [TestMethod]
+    public void New_ReturnsCorrectView_True()
+    {
+      //Arrange
+      RepeatCountersController controller = new RepeatCountersController();
+
+      //Act
+      ActionResult newView = controller.New();
+
+      //Assert
+      Assert.IsInstanceOfType(newView, typeof(ViewResult));
     }
 
     // [TestMethod]

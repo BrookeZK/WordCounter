@@ -14,6 +14,12 @@ namespace WordCounter.Controllers
       return View(testList);
     }
 
+    [HttpGet("/repeat-counter/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
     // [HttpPost("/game")]
     // public ActionResult Update(string userLetter)
     // {
