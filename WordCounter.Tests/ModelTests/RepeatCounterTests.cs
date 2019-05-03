@@ -10,7 +10,7 @@ namespace WordCounter.Tests
     {
         public void Dispose()
         {
-          RepeatCounter.ClearAll();
+            RepeatCounter.ClearAll();
         }
 
         [TestMethod]
@@ -111,20 +111,20 @@ namespace WordCounter.Tests
         [TestMethod]
         public void GetAll_ReturnsAllRepeatCounterObjects_RepeatCounterList()
         {
-          //Arrange
-          string word1 = "Work";
-          string sentence1 = "I love my Work";
-          string word2 = "Happy";
-          string sentence2 = "Happy days";
-          RepeatCounter newRepeatCounter1 = new RepeatCounter(word1, sentence1);
-          RepeatCounter newRepeatCounter2 = new RepeatCounter(word2, sentence2);
-          List<RepeatCounter> newList = new List<RepeatCounter> { newRepeatCounter1, newRepeatCounter2 };
+            //Arrange
+            string word1 = "Work";
+            string sentence1 = "I love my Work";
+            string word2 = "Happy";
+            string sentence2 = "Happy days";
+            RepeatCounter newRepeatCounter1 = new RepeatCounter(word1, sentence1);
+            RepeatCounter newRepeatCounter2 = new RepeatCounter(word2, sentence2);
+            List<RepeatCounter> newList = new List<RepeatCounter> { newRepeatCounter1, newRepeatCounter2 };
 
-          //Act
-          List<RepeatCounter> result = RepeatCounter.GetAll();
+            //Act
+            List<RepeatCounter> result = RepeatCounter.GetAll();
 
-          //Assert
-          CollectionAssert.AreEqual(newList, result);
+            //Assert
+            CollectionAssert.AreEqual(newList, result);
         }
 
     }

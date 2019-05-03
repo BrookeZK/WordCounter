@@ -30,12 +30,12 @@ namespace WordCounter.Models
 
         public static void ClearAll()
         {
-          _instances.Clear();
+            _instances.Clear();
         }
 
         public static List<RepeatCounter> GetAll()
         {
-          return _instances;
+            return _instances;
         }
 
         // public char[] ReplaceSpecialCharacters(string userInput)
@@ -60,7 +60,7 @@ namespace WordCounter.Models
 
         public bool IsInputValid(string userInput)
         {
-          char[] userInputArray = userInput.ToCharArray();
+            char[] userInputArray = userInput.ToCharArray();
             for (int i = 0; i < userInputArray.Length; i++)
             {
                 for (int j = 0; j < _numbers.Count; j++)

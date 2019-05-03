@@ -1,58 +1,58 @@
 body {
-  background-image: url("../img/background.gif");
-  background-size: cover;
+    background-image: url("../img/background.gif");
+    background-size: cover;
 }
 
 .createNew  {
-  text-align: center;
-  align-items: center;
-  font-family: 'ZCOOL KuaiLe', cursive;
-  color: pink;
-  font-size: 30px;
-  line-height: 70px;
-  /* padding: 20px; */
+    text-align: center;
+    align-items: center;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: pink;
+    font-size: 30px;
+    line-height: 70px;
+    /* padding: 20px; */
 }
 #homePage {
-  text-align: center;
-  align-items: center;
-  font-family: 'ZCOOL KuaiLe', cursive;
-  color: pink;
+    text-align: center;
+    align-items: center;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: pink;
 }
 
 #repeatCounter h1 {
-  text-align: center;
-  /* align-items: center; */
-  font-family: 'ZCOOL KuaiLe', cursive;
-  color: pink;
+    text-align: center;
+    /* align-items: center; */
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: pink;
 }
 
 .special{
-  color: purple;
+    color: purple;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: 50% 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 
 }
 
 .wrapper > div{
-  padding: 40px;
-  background-image: linear-gradient(rgb(198, 173, 255, 0.8), rgb(255, 173, 244, 0.7));
-  margin: 40px;
-  border: 4px solid pink;
-  text-align: center;
-  align-items: center;
-  font-family: 'ZCOOL KuaiLe', cursive;
-  color: grey;
+    padding: 40px;
+    background-image: linear-gradient(rgb(198, 173, 255, 0.8), rgb(255, 173, 244, 0.7));
+    margin: 40px;
+    border: 4px solid pink;
+    text-align: center;
+    align-items: center;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: grey;
 }
 
 h1  {
-  font-family: 'ZCOOL KuaiLe', cursive;
-  font-size: 100px;
-  color: pink;
-  text-align: center;
-  align-items: center;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 100px;
+    color: pink;
+    text-align: center;
+    align-items: center;
 }
 
 h3 {
@@ -62,62 +62,62 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 input{
-  color: purple;
+    color: purple;
 }
 /* footer {
-  color: aqua;
-  font-size: 25px;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  padding: 20px;
-} */
+    color: aqua;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 20px;
+    } */
 
-.myButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
-	box-shadow:inset 0px 1px 0px 0px #efdcfb;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #bc80ea));
-	background:-moz-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-	background:-webkit-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-	background:-o-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-	background:-ms-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
-	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0);
-	background-color:#dfbdfa;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #c584f3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:28px;
-	font-weight:bold;
-	padding:14px 24px;
-	text-decoration:none;
-	text-shadow:0px 2px 0px #9752cc;
-  /* margin-top: 100px; */
-}
-.myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa));
-	background:-moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-	background:-webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-	background:-o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-	background:-ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
-	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
-	background-color:#bc80ea;
-  color: white;
-  text-decoration: none;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
+    .myButton {
+        -moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+        box-shadow:inset 0px 1px 0px 0px #efdcfb;
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #bc80ea));
+        background:-moz-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+        background:-webkit-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+        background:-o-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+        background:-ms-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+        background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0);
+        background-color:#dfbdfa;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        border:1px solid #c584f3;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:28px;
+        font-weight:bold;
+        padding:14px 24px;
+        text-decoration:none;
+        text-shadow:0px 2px 0px #9752cc;
+        /* margin-top: 100px; */
+    }
+    .myButton:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa));
+        background:-moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+        background:-webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+        background:-o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+        background:-ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+        background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
+        background-color:#bc80ea;
+        color: white;
+        text-decoration: none;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }

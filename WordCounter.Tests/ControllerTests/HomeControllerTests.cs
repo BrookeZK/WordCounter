@@ -7,21 +7,21 @@ using System;
 
 namespace WordCounter.Tests
 {
-  [TestClass]
-  public class HomeControllerTest
-  {
-    [TestMethod]
-    public void Index_ReturnsCorrectView_True()
+    [TestClass]
+    public class HomeControllerTest
     {
-        //Arrange
-        HomeController controller = new HomeController();
+        [TestMethod]
+        public void Index_ReturnsCorrectView_True()
+        {
+            //Arrange
+            HomeController controller = new HomeController();
 
-        //Act
-        ActionResult indexView = controller.Index();
+            //Act
+            ActionResult indexView = controller.Index();
 
-        //Assert
-        Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+            //Assert
+            Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+        }
+
     }
-
-  }
 }
