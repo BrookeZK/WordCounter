@@ -54,6 +54,11 @@ body {
     color: grey;
 }
 
+#grid {
+    display: grid;
+    grid-template-columns: auto;
+}
+
 h1  {
     font-family: 'ZCOOL KuaiLe', cursive;
     font-size: 100px;
