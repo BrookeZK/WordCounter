@@ -1,16 +1,32 @@
 @{
   Layout = "_Layout";
 }
+
 <div class="createNew">
     <h1>Make A New Word Count</h1>
-    <form action="/word-counter" method="post">
-        <label for="wordInput">Please enter the word you would like to count:</label><br>
-        <h2>@Model.[0].ErrorMessage</h2>
-        <input id="wordInput" name="wordInput" type="text" required><br>
-        <label for="sentenceInput">Please enter your sentence:</label><br>
-        <input id="sentenceInput" name="sentenceInput" type="text" required><br><br>
-        <button class="myButton" type="submit">Submit</button><br>
-    </form>
+        @if (@Model == null) 
+        {
+        <form action="/word-counter" method="post">
+          <label for="wordInput">Please enter the word you would like to count:</label><br>
+          <h2>Please enter your word:</h2>
+          <input id="wordInput" name="wordInput" type="text" required><br>
+          <label for="sentenceInput">Please enter your sentence:</label><br>
+          <input id="sentenceInput" name="sentenceInput" type="text" required><br><br>
+          <button class="myButton" type="submit">Submit</button><br>
+        </form>
+        }
+        @if (@Model != null)
+        {
+          <form action="/word-counter" method="post">
+          <label for="wordInput">Please enter the word you would like to count:</label><br>
+          <h2>@Model:</h2>
+          <input id="wordInput" name="wordInput" type="text" required><br>
+          <label for="sentenceInput">Please enter your sentence:</label><br>
+          <input id="sentenceInput" name="sentenceInput" type="text" required><br><br>
+          <button class="myButton" type="submit">Submit</button><br>
+        </form>
+        }
+        
 
     <a href="/word-counter" class="myButton">Back to Word Count</a>
     <a href="/" class="myButton">Back Home</a>

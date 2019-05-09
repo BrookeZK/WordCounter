@@ -26,17 +26,15 @@ namespace GameCenter.Controllers
             WordCounter newWordCounter = new WordCounter(wordInput, sentenceInput);
             if (newWordCounter.IsInputValid(wordInput) == false)
             {
-                newWordCounter.ErrorMessage = "Please Enter A Word!!!";
+                string error = "Please Enter A Word!!!";
                 List<WordCounter> allWordCounters = WordCounter.GetAll();
-                //removes last word passed through form that was invalid:
+                // removes last word passed through form that was invalid:
                 allWordCounters.RemoveAt(allWordCounters.Count - 1);
-                return RedirectToAction("New", allWordCounters);
+                return View("New", error);
             }
             else
             {
-            newWordCounter.CheckIfWordMatchSentence();
-            List<WordCounter> allWordCounters = WordCounter.GetAll();
-            return RedirectToAction("Index", allWordCounters);
+            return RedirectToAction("Index");
             }
         }
 

@@ -29,7 +29,7 @@
                 @foreach (var instance in Model)
                 {
                 <div class="responseDisplay">
-                    <p>Your word <strong class="special">"@instance.WordInput"</strong> appeared <strong class="special">@instance.InstancesOfMatch</strong> times in <strong class="special">"@instance.SentenceInput"</strong></p>
+                    <p>Your word <strong class="special">"@instance.WordInput"</strong> appeared <strong class="special">@instance.CheckIfWordMatchSentence()</strong> times in <strong class="special">"@instance.SentenceInput"</strong></p>
                 </div>
                 }
             }
