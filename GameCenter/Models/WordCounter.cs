@@ -8,6 +8,7 @@ namespace GameCenter.Models
         private string _wordInput;
         private string _sentenceInput;
         private int _instancesOfMatch = 0;
+        private string _errorMessage = "";
         // private string _comparisonString;
         private static List<char> _alphabet = new List<char> {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 't', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z', ' '};
         private static List<char> _numbers = new List<char> {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
@@ -15,14 +16,15 @@ namespace GameCenter.Models
 
         public WordCounter(string wordInput, string sentenceInput)
         {
-            _wordInput = wordInput;
-            _sentenceInput = sentenceInput;
+            _wordInput = wordInput.ToLower();
+            _sentenceInput = sentenceInput.ToLower();
             _instances.Add(this);
         }
 
         public string WordInput{ get => _wordInput; set => _wordInput = value; }
         public string SentenceInput{ get => _sentenceInput; set => _sentenceInput = value; }
         public int InstancesOfMatch{ get => _instancesOfMatch; set => _instancesOfMatch = value;}
+        public string ErrorMessage{ get => _errorMessage; set => _errorMessage = value;}
         // public string ComparisonString{ get => _comparisonString; set => _comparisonString = value;}
         public List<char> Alphabet{ get => _alphabet; set => _alphabet = value; }
         public List<char> Numbers{ get => _numbers; set => _numbers = value; }

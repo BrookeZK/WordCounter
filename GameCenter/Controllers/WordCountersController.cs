@@ -24,9 +24,20 @@ namespace GameCenter.Controllers
         public ActionResult Create(string wordInput, string sentenceInput)
         {
             WordCounter newWordCounter = new WordCounter(wordInput, sentenceInput);
+            if (newWordCounter.IsInputValid(wordInput) == false)
+            {
+                newWordCounter.ErrorMessage = "Please Enter A Word!!!";
+                List<WordCounter> allWordCounters = WordCounter.GetAll();
+                //removes last word passed through form that was invalid:
+                allWordCounters.RemoveAt(allWordCounters.Count - 1);
+                return RedirectToAction("New", allWordCounters);
+            }
+            else
+            {
             newWordCounter.CheckIfWordMatchSentence();
             List<WordCounter> allWordCounters = WordCounter.GetAll();
             return RedirectToAction("Index", allWordCounters);
+            }
         }
 
         [HttpPost("/word-counter/delete")]

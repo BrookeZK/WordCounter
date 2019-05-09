@@ -16,17 +16,17 @@ namespace GameCenter.Controllers
             return View(thisGame);
         }
 
-        // [HttpPost("/hangman")]
-        // public ActionResult Update(string userLetter)
-        // {
-        //     // char converted;
-        //     // bool userChar = Char.TryParse(userLetter, out converted);
-        //
-        //     char newChar = userLetter[0];
-        //     HangMan thisGame = HangMan.FindGame();
-        //     thisGame.DoesContainChar(newChar);
-        //     return View("Index", thisGame);
-        // }
+        [HttpPost("/hangman")]
+        public ActionResult Update(string userLetter)
+        {
+            // char converted;
+            // bool userChar = Char.TryParse(userLetter, out converted);
+
+            char newChar = userLetter[0];
+            HangMan thisGame = HangMan.FindGame();
+            thisGame.DoesContainChar(newChar);
+            return View("Index", thisGame);
+        }
 
     }
 }

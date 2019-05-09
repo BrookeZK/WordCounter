@@ -72,16 +72,15 @@ namespace GameCenter.Models
         if(_gameWord[i] == userChar)
         {
           CheckForWin();
-          UpdateLettersGuessed(userChar);
           UpdateBlanks(userChar);
         }
         else
         {
-          UpdateLettersGuessed(userChar);
           CheckForLose();
-          UpdateNumberOfGuesses();
         }
       }
+      UpdateNumberOfGuesses();
+      UpdateLettersGuessed(userChar);
     }
 
     public char[] UpdateBlanks(char userChar)
